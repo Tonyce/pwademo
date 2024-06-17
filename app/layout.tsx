@@ -48,8 +48,19 @@ export const metadata: Metadata = {
   },
 };
 
+// export const viewport: Viewport = {
+//   themeColor: "#000",
+// };
+
 export const viewport: Viewport = {
-  themeColor: "#000",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "cyan" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
 };
 
 export default function RootLayout({
